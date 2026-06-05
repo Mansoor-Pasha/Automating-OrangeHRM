@@ -6,15 +6,13 @@
       <class name="tests.LoginTest">
         <methods>
           <include name="setup"/>
-          <include name="tearDown"/>
           <include name="testBlankPass"/>
-          <include name="testInvalidPass"/>
-          <include name="testNavigate"/>
+          <include name="tearDown"/>
           <include name="testBlankCrede"/>
-          <include name="testInvalidUserName"/>
           <include name="testBlankUserInvaPass"/>
-          <include name="testBlankPassInvUserName"/>
+          <include name="testInvalidUserName"/>
           <include name="testBlankUserName"/>
+          <include name="testBlankPassInvUserName"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>

@@ -48,7 +48,7 @@ public class LoginTest extends BaseTest {
 		lp.login(VALID_USERNAME, INVALID_PASSWORD);
 		
 		String actualError = lp.getErrorMsg();
-		String expectedError = "Invalid Credentials";
+		String expectedError = "Invalid credentials";
 		
 		Assert.assertTrue(actualError.contains(expectedError), 
 				"TC_002 Failed :- Expected error " + expectedError + "but, The Actual error is " + actualError);
@@ -63,25 +63,26 @@ public class LoginTest extends BaseTest {
 		LoginPage lp = new LoginPage(driver);
 		lp.login(INVALID_USERNAME, VALID_PASSWORD);
 		
-		String actualError = lp.getErrorMsg();
-		String expectedError = "Invalid Credentials";
-		
-		Assert.assertTrue(actualError.contains(expectedError),
-				"TC_003 Failed :- Excepted error is " + expectedError + "but, got error as " + actualError);
-		System.out.println("TC_003 Passed : Error message shown for wrong UserName" + actualError);
-	}
+		String actualError   = lp.getErrorMsg();
+        String expectedError = "Invalid credentials";
+
+        Assert.assertTrue(actualError.contains(expectedError),
+            "TC_003 FAILED: Expected error '" + expectedError + "' but got '" + actualError + "'");
+
+        System.out.println("TC_003 PASSED: Error shown for wrong username: " + actualError);
+    }
 	
 	//TC_004 :- Login with Blank UserName & Valid Password 
 	@Test (priority = 4, description = "Verifying Login with keeping userName blank and entering Valid Password")
 	public void testBlankUserName ()
 	{
 		LoginPage lp = new LoginPage(driver);
-		lp.enterusername("");
-		lp.enterpass(VALID_PASSWORD);
-		lp.clickBtn();
+		lp.enterUsername("");
+		lp.enterPassword(VALID_PASSWORD);
+		lp.clickLoginButton();
 		
 		String actualError = lp.getErrorMsg();
-		String expectedError = "UserName field should be enter";
+		String expectedError = "Required";
 		
 		Assert.assertTrue(actualError.contains(expectedError),
 				"TC_004 Failed :- because, Expected error is " + expectedError + "but, got error as " + actualError);
@@ -93,12 +94,12 @@ public class LoginTest extends BaseTest {
 	public void testBlankUserInvaPass ()
 	{
 		LoginPage lp = new LoginPage(driver);
-		lp.enterusername("");
-		lp.enterpass(INVALID_PASSWORD);
-		lp.clickBtn();
+		lp.enterUsername("");
+		lp.enterPassword(INVALID_PASSWORD);
+		lp.clickLoginButton();
 		
 		String actualError = lp.getErrorMsg();
-		String expectedError = "UserName field should be enter";
+		String expectedError = "Required";
 		
 		Assert.assertTrue(actualError.contains(expectedError),
 				"TC_005 Failed :- because, Excepted error is " + expectedError + "but, got error as " + actualError);
@@ -110,12 +111,12 @@ public class LoginTest extends BaseTest {
 	public void testBlankPass ()
 	{
 		LoginPage lp = new LoginPage(driver);
-		lp.enterusername(VALID_USERNAME);
-		lp.enterpass("");
-		lp.clickBtn();
+		lp.enterUsername(VALID_USERNAME);
+		lp.enterPassword("");
+		lp.clickLoginButton();
 		
 		String actualError = lp.getErrorMsg();
-		String expectedError = "Password field should be enter";
+		String expectedError = "Required";
 		
 		Assert.assertTrue(actualError.contains(expectedError),
 				"TC_006 Failed:- because, Expected error is " + expectedError + "but, got error as " + actualError);
@@ -127,12 +128,12 @@ public class LoginTest extends BaseTest {
 	public void testBlankPassInvUserName ()
 	{
 		LoginPage lp = new LoginPage(driver);
-		lp.enterusername(INVALID_USERNAME);
-		lp.enterpass("");
-		lp.clickBtn();
+		lp.enterUsername(INVALID_USERNAME);
+		lp.enterPassword("");
+		lp.clickLoginButton();
 		
 		String actualError = lp.getErrorMsg();
-		String expectedError = "Password field should be enter";
+		String expectedError = "Required";
 		
 		Assert.assertTrue(actualError.contains(expectedError),
 				"TC_007 Failed :- because, Expected error is " + expectedError + "but, got error as " + actualError);
@@ -144,9 +145,9 @@ public class LoginTest extends BaseTest {
 	public void testBlankCrede ()
 	{
 		LoginPage lp = new LoginPage(driver);
-		lp.enterusername("");
-		lp.enterpass("");
-		lp.clickBtn();
+		lp.enterUsername("");
+		lp.enterPassword("");
+		lp.clickLoginButton();
 		
 		String actualError = lp.getErrorMsg();
 		String expectedError = "UserName and Password field should be enter";
@@ -162,12 +163,12 @@ public class LoginTest extends BaseTest {
 	public void testNavigate ()
 	{
 		LoginPage lp = new LoginPage(driver);
-		lp.enterusername(VALID_USERNAME);
 		lp.forgotpass();
 		
 		String currentURL = lp.getForPassURL();
+		String expectedURL = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode";
 		
-		Assert.assertTrue(currentURL.contains(currentURL));
+		Assert.assertTrue(currentURL.contains(expectedURL));
 		System.out.println("The Forgot Password Page has been opened");
 	}
 }

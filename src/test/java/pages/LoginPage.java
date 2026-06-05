@@ -2,15 +2,27 @@ package pages;
 
 import java.time.Duration;
 
+/**
+ * LoginPage.Java = it is a page object model for login page of OrangeHRM
+ * 
+ *  What is POM :- Instead of writing locators directly in test methods. We keep all locators and actions in a separate class
+ *  
+ *  Why POM ?
+ *  	# If the UI changes, you only update this file. Instead of updating in all fields
+ *  	# Test become readable like clean english */
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class LoginPage {
 	
-	WebDriver driver;
+	private WebDriver driver;
+	private WebDriverWait wait;
 	
 	By usernameField  = By.xpath("//input[@name = 'username']");
 	By passwordField = By.xpath("//input[@name='password']");
@@ -22,25 +34,24 @@ public class LoginPage {
 	public LoginPage (WebDriver driver)
 	{
 		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
-	
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	
+		
 	// Page actions - Methods that represent user actions
 	
 	// Method for Entering UserName 
-	public void enterusername (String username)
+	public void enterUsername (String username)
 	{
 		driver.findElement(usernameField).sendKeys(username);		
 	}
 	
 	//Method for Entering Password
-	public void enterpass (String password) {
+	public void enterPassword (String password) {
 		driver.findElement(passwordField).sendKeys(password);
 	}
 	
 	//Method for Clicking the Login Button
-	public void clickBtn ()
+	public void clickLoginButton ()
 	{
 		driver.findElement(loginBtn).click();
 	}
@@ -48,9 +59,9 @@ public class LoginPage {
 	//Method for Complete Login (By Combining the above 3 Methods)
 	public void login (String username, String password)
 	{
-		enterusername("Admin");
-		enterpass("admin123");
-		clickBtn();
+		enterUsername(username);
+		enterPassword(password);
+		clickLoginButton();
 	}
 	
 	//Method for Clicking Forgot the Password Link
@@ -62,8 +73,7 @@ public class LoginPage {
 	//Method for getting URL of the Forgot Password Link
 	public String getForPassURL ()
 	{
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/requestPasswordResetCode");
-		return null;
+		return driver.getCurrentUrl();
 	}
 	
 	public boolean isDashBoardDisplayed ()
@@ -77,7 +87,7 @@ public class LoginPage {
 	
 	public String getErrorMsg()
 	{
-		WebElement error = (WebElement) wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(dashboardText));
+		WebElement error = wait.until(ExpectedConditions.visibilityOfElementLocated(getErrorMsg));
 		return error.getText();
 	}
 	

@@ -1,91 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="1" failed="8" skipped="0">
+<testng-results ignored="0" total="9" passed="3" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-04T16:15:52 IST" name="Suite" finished-at="2026-06-04T16:17:03 IST" duration-ms="71637">
+  <suite started-at="2026-06-05T10:49:01 IST" name="Suite" finished-at="2026-06-05T10:54:48 IST" duration-ms="346796">
     <groups>
     </groups>
-    <test started-at="2026-06-04T16:15:52 IST" name="Test" finished-at="2026-06-04T16:17:03 IST" duration-ms="71637">
+    <test started-at="2026-06-05T10:49:01 IST" name="Test" finished-at="2026-06-05T10:54:48 IST" duration-ms="346796">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:15:52 IST" name="setup" finished-at="2026-06-04T16:16:01 IST" duration-ms="9454" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:49:01 IST" name="setup" finished-at="2026-06-05T10:49:11 IST" duration-ms="10346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testValidLogin()[pri:1, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:01 IST" name="testValidLogin" description="Verify Successful Login with Valid Credentials" finished-at="2026-06-04T16:16:07 IST" duration-ms="5776" status="PASS">
+        <test-method signature="testValidLogin()[pri:1, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:49:11 IST" name="testValidLogin" description="Verify Successful Login with Valid Credentials" finished-at="2026-06-05T10:49:28 IST" duration-ms="16215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:07 IST" name="tearDown" finished-at="2026-06-04T16:16:07 IST" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:49:28 IST" name="tearDown" finished-at="2026-06-05T10:49:28 IST" duration-ms="219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:07 IST" name="setup" finished-at="2026-06-04T16:16:12 IST" duration-ms="4850" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:49:28 IST" name="setup" finished-at="2026-06-05T10:49:41 IST" duration-ms="13526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testInvalidPass()[pri:2, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:12 IST" name="testInvalidPass" description="Verify Login with Valid UserName &amp; Invalid Password" finished-at="2026-06-04T16:16:14 IST" duration-ms="1570" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:259)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:250)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
-at pages.LoginPage.getErrorMsg(LoginPage.java:80)
-at tests.LoginTest.testInvalidPass(LoginTest.java:50)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="testInvalidPass()[pri:2, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:49:41 IST" name="testInvalidPass" description="Verify Login with Valid UserName &amp; Invalid Password" finished-at="2026-06-05T10:49:58 IST" duration-ms="16257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidPass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:14 IST" name="tearDown" finished-at="2026-06-04T16:16:14 IST" duration-ms="193" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:49:58 IST" name="tearDown" finished-at="2026-06-05T10:49:58 IST" duration-ms="244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:14 IST" name="setup" finished-at="2026-06-04T16:16:20 IST" duration-ms="6210" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:49:58 IST" name="setup" finished-at="2026-06-05T10:52:00 IST" duration-ms="121573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testInvalidUserName()[pri:3, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:20 IST" name="testInvalidUserName" description="Verify login with Invalid UserName and Valid Password" finished-at="2026-06-04T16:16:21 IST" duration-ms="679" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="testInvalidUserName()[pri:3, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:52:00 IST" name="testInvalidUserName" description="Verify login with Invalid UserName and Valid Password" finished-at="2026-06-05T10:52:37 IST" duration-ms="37119" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57092}, goog:processID: 22424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57092/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 52f214353e755bbe3fb4bf57382502bf]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:259)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:250)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
-at pages.LoginPage.getErrorMsg(LoginPage.java:80)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57092}, goog:processID: 22424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57092/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 52f214353e755bbe3fb4bf57382502bf
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at pages.LoginPage.getErrorMsg(LoginPage.java:90)
 at tests.LoginTest.testInvalidUserName(LoginTest.java:66)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -115,29 +86,40 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidUserName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:21 IST" name="tearDown" finished-at="2026-06-04T16:16:21 IST" duration-ms="167" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:52:37 IST" name="tearDown" finished-at="2026-06-05T10:52:37 IST" duration-ms="209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:21 IST" name="setup" finished-at="2026-06-04T16:16:27 IST" duration-ms="6262" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:52:37 IST" name="setup" finished-at="2026-06-05T10:52:45 IST" duration-ms="7986" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testBlankUserName()[pri:4, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:27 IST" name="testBlankUserName" description="Verifying Login with keeping userName blank and entering Valid Password" finished-at="2026-06-04T16:16:28 IST" duration-ms="562" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="testBlankUserName()[pri:4, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:52:45 IST" name="testBlankUserName" description="Verifying Login with keeping userName blank and entering Valid Password" finished-at="2026-06-05T10:52:59 IST" duration-ms="13711" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56300}, goog:processID: 20868, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56300/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aed16a3ec8da3c9ee2bfbe60a8b5502b]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:259)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:250)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
-at pages.LoginPage.getErrorMsg(LoginPage.java:80)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56300}, goog:processID: 20868, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56300/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aed16a3ec8da3c9ee2bfbe60a8b5502b
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at pages.LoginPage.getErrorMsg(LoginPage.java:90)
 at tests.LoginTest.testBlankUserName(LoginTest.java:83)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -167,29 +149,40 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankUserName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:28 IST" name="tearDown" finished-at="2026-06-04T16:16:28 IST" duration-ms="156" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:52:59 IST" name="tearDown" finished-at="2026-06-05T10:52:59 IST" duration-ms="167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:28 IST" name="setup" finished-at="2026-06-04T16:16:35 IST" duration-ms="7638" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:52:59 IST" name="setup" finished-at="2026-06-05T10:53:08 IST" duration-ms="9296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testBlankUserInvaPass()[pri:5, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:35 IST" name="testBlankUserInvaPass" description="Verifying Login with Keeping UserName blank and entering the Invalid Password" finished-at="2026-06-04T16:16:36 IST" duration-ms="574" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="testBlankUserInvaPass()[pri:5, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:08 IST" name="testBlankUserInvaPass" description="Verifying Login with Keeping UserName blank and entering the Invalid Password" finished-at="2026-06-05T10:53:19 IST" duration-ms="11302" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59117}, goog:processID: 17820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59117/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f95d58bb48a33c3c0664a637bef3ae4a]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:259)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:250)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
-at pages.LoginPage.getErrorMsg(LoginPage.java:80)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59117}, goog:processID: 17820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59117/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f95d58bb48a33c3c0664a637bef3ae4a
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at pages.LoginPage.getErrorMsg(LoginPage.java:90)
 at tests.LoginTest.testBlankUserInvaPass(LoginTest.java:100)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -219,29 +212,40 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankUserInvaPass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:36 IST" name="tearDown" finished-at="2026-06-04T16:16:36 IST" duration-ms="149" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:19 IST" name="tearDown" finished-at="2026-06-05T10:53:20 IST" duration-ms="178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:36 IST" name="setup" finished-at="2026-06-04T16:16:42 IST" duration-ms="6321" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:20 IST" name="setup" finished-at="2026-06-05T10:53:24 IST" duration-ms="4736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testBlankPass()[pri:6, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:42 IST" name="testBlankPass" description="Verifying login with Entering Valid UserName and Keeping Password Blank" finished-at="2026-06-04T16:16:43 IST" duration-ms="889" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="testBlankPass()[pri:6, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:24 IST" name="testBlankPass" description="Verifying login with Entering Valid UserName and Keeping Password Blank" finished-at="2026-06-05T10:53:35 IST" duration-ms="10545" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52565}, goog:processID: 5688, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52565/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: de8dd8551f78bb62c37297928d12c336]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:259)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:250)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
-at pages.LoginPage.getErrorMsg(LoginPage.java:80)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52565}, goog:processID: 5688, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52565/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: de8dd8551f78bb62c37297928d12c336
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at pages.LoginPage.getErrorMsg(LoginPage.java:90)
 at tests.LoginTest.testBlankPass(LoginTest.java:117)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -271,29 +275,40 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankPass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:43 IST" name="tearDown" finished-at="2026-06-04T16:16:44 IST" duration-ms="156" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:35 IST" name="tearDown" finished-at="2026-06-05T10:53:35 IST" duration-ms="178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:44 IST" name="setup" finished-at="2026-06-04T16:16:47 IST" duration-ms="3932" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:35 IST" name="setup" finished-at="2026-06-05T10:53:40 IST" duration-ms="5021" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testBlankPassInvUserName()[pri:7, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:47 IST" name="testBlankPassInvUserName" description="Verifying login with Invalid UserName and Keeping password Blank" finished-at="2026-06-04T16:16:48 IST" duration-ms="973" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="testBlankPassInvUserName()[pri:7, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:40 IST" name="testBlankPassInvUserName" description="Verifying login with Invalid UserName and Keeping password Blank" finished-at="2026-06-05T10:53:51 IST" duration-ms="11306" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58064}, goog:processID: 16432, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58064/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75a6e3aea7ea125c746b0867f8101f22]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:259)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:250)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
-at pages.LoginPage.getErrorMsg(LoginPage.java:80)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58064}, goog:processID: 16432, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58064/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75a6e3aea7ea125c746b0867f8101f22
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at pages.LoginPage.getErrorMsg(LoginPage.java:90)
 at tests.LoginTest.testBlankPassInvUserName(LoginTest.java:134)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -323,29 +338,40 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankPassInvUserName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:48 IST" name="tearDown" finished-at="2026-06-04T16:16:49 IST" duration-ms="153" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:51 IST" name="tearDown" finished-at="2026-06-05T10:53:51 IST" duration-ms="173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:49 IST" name="setup" finished-at="2026-06-04T16:16:55 IST" duration-ms="6282" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:51 IST" name="setup" finished-at="2026-06-05T10:53:59 IST" duration-ms="7083" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testBlankCrede()[pri:8, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:55 IST" name="testBlankCrede" description="Verifying the login with keeping both UserName and Password field Blank" finished-at="2026-06-04T16:16:56 IST" duration-ms="1014" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="testBlankCrede()[pri:8, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:53:59 IST" name="testBlankCrede" description="Verifying the login with keeping both UserName and Password field Blank" finished-at="2026-06-05T10:54:14 IST" duration-ms="15493" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61963}, goog:processID: 16436, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61963/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6afcf51c160a21dfa5e1f4f19198bda3]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "driver" is null
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:259)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:250)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
-at pages.LoginPage.getErrorMsg(LoginPage.java:80)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-alert-content oxd-alert-content--error'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-alert-content oxd-alert-content--error']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\solog\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61963}, goog:processID: 16436, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61963/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6afcf51c160a21dfa5e1f4f19198bda3
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at pages.LoginPage.getErrorMsg(LoginPage.java:90)
 at tests.LoginTest.testBlankCrede(LoginTest.java:151)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -375,59 +401,23 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankCrede -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:56 IST" name="tearDown" finished-at="2026-06-04T16:16:56 IST" duration-ms="158" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:54:14 IST" name="tearDown" finished-at="2026-06-05T10:54:14 IST" duration-ms="178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:16:56 IST" name="setup" finished-at="2026-06-04T16:17:02 IST" duration-ms="5662" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:54:14 IST" name="setup" finished-at="2026-06-05T10:54:31 IST" duration-ms="17043" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testNavigate()[pri:9, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:17:02 IST" name="testNavigate" description="Navigating to Forgot Password Link" finished-at="2026-06-04T16:17:03 IST" duration-ms="1458" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.contains(java.lang.CharSequence)" because "currentURL" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "currentURL" is null
-at tests.LoginTest.testNavigate(LoginTest.java:170)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="testNavigate()[pri:9, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:54:31 IST" name="testNavigate" description="Navigating to Forgot Password Link" finished-at="2026-06-05T10:54:48 IST" duration-ms="16440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNavigate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@28701274]" started-at="2026-06-04T16:17:03 IST" name="tearDown" finished-at="2026-06-04T16:17:03 IST" duration-ms="143" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7dcf94f8]" started-at="2026-06-05T10:54:48 IST" name="tearDown" finished-at="2026-06-05T10:54:48 IST" duration-ms="193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
