@@ -18,28 +18,11 @@ public class DashBoardPage {
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 	
-	// For Selecting the Country Name from DropDown of UPGRADE PAGE
-	public void countrySelection ()
-	{
-		WebElement dropDownElement = driver.findElement(By.id("Form_getForm_Country"));
-		Select selectCountry = new Select (dropDownElement);
-		selectCountry.selectByValue("India");
-	}
-	
-	//For Selecting the Number of Employees from UPGRADE PAGE DropDown
-	public void NumberOfEmployeeSelect ()
-	{
-		WebElement dropDownElement = driver.findElement(By.id("Form_getForm_NoOfEmployees"));
-		Select selectEmployee = new Select (dropDownElement);
-		selectEmployee.selectByValue("11 - 50");
-	}
-	
-	
-	// DashBoard Header Paths 
+	// For DashBoard Header Paths 
 	By dashboardText = By.xpath("//h6[text() = 'Dashboard']");
 	By upgradeButton = By.xpath("//button[@class='oxd-glass-button orangehrm-upgrade-button']");
 	
-	//UpgradePage Information
+	//For Testing the UpgradePage Section of OrangeHRM
 	public void urlUpgradePage ()
 	{
 		driver.get("https://orangehrm.com/open-source/upgrade-to-advanced");
@@ -50,9 +33,10 @@ public class DashBoardPage {
 	By UpgradePhoneNumber = By.xpath("//input[@id= 'Form_getForm_Contact']");
 	By UpgradeYourFullName = By.xpath("//input[@id= 'Form_getForm_CompanyName']");
 	By UpgradeJobTitle = By.xpath("//input[@id= 'Form_getForm_JobTitle']");
-	By UpgradeNumOfEmployees = By.xpath("//div[@class= 'recaptcha-checkbox-borderAnimation']");
+	By UpgradeNotRobotCheckBox = By.xpath("//div[@class= 'recaptcha-checkbox-borderAnimation']");
 	By UpgradeSubmit = By.xpath("//input[@class= 'action']");
 	
+	//LOCATORS FOR TESTING orangeHRM DASHBOARD PAGE 
 	//Search Box Path
 	By searchPlaceHolder = By.xpath("//input[@class='oxd-input oxd-input--active']");
 	
@@ -79,6 +63,66 @@ public class DashBoardPage {
 		return driver.getCurrentUrl();
 	}
 	
+	//METHODS FOR ACCESSING LOCATORS OF THE UPGRADEPAGE SECTION OF orangeHRM 
+	//Method for Entering full name in the Upgrade page Section
+	public void enterFullName ()
+	{
+		driver.findElement(UpgradeFullName);
+	}
+	
+	//Method for Entering Work Email in the Upgrade Page Section
+	public void enterWorkMail ()
+	{
+		driver.findElement(UpgradeEmail);
+	}
+	
+	//Method for Entering Phone Number in UpgradePage Section
+	public void enterContactDetails ()
+	{
+		driver.findElement(UpgradePhoneNumber);
+	}
+	
+	// Method for Selecting the Country Name from DropDown of UPGRADE PAGE
+	public void countrySelection ()
+	{
+		WebElement dropDownElement = driver.findElement(By.id("Form_getForm_Country"));
+		Select selectCountry = new Select (dropDownElement);
+		selectCountry.selectByValue("India");
+	}
+		
+	//Method for Enterting the name in YOUR FULL NAME PlaceHolder in UpgradePage Section
+	public void enterYourFullName ()
+	{
+		driver.findElement(UpgradeYourFullName);
+	}
+	
+	//Method for Entering Job Title in Upgrade Page Section
+	public void enterJobTitle ()
+	{
+		driver.findElement(UpgradeJobTitle);
+	}
+	
+	//Method for Selecting the Number of Employees from UPGRADE PAGE DropDown
+	public void NumberOfEmployeeSelect ()
+	{
+		WebElement dropDownElement = driver.findElement(By.id("Form_getForm_NoOfEmployees"));
+		Select selectEmployee = new Select (dropDownElement);
+		selectEmployee.selectByValue("11 - 50");
+	}
+	
+	//Method for checking the "I AM NOT A ROBOT" Checkbox in UpgradePage Section
+	public void clickNotRobotCheckBox ()
+	{
+		driver.findElement(UpgradeNotRobotCheckBox);
+	}
+	
+	//Method for Clicking the Submit Button of the UpgradePage Section
+	public void clickSubmitButton ()
+	{
+		driver.findElement(UpgradeSubmit);
+	}
+	
+	//METHODS FOR ACCESSING LOCATORS OF THE orangeHRM DASHBOARD 
 	//Method for Getting DashBoardText of the Dashboard
 	public String getDashboardText ()
 	{
