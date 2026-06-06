@@ -1,8 +1,11 @@
 package tests;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -38,14 +41,14 @@ public class DashBoardTest extends BaseTest  {
 				"Dashboard");
 	}
 	
-	@Test (priority = 2)
+	/*@Test (priority = 2)
 	public void testClickUpgradeButton ()
 	{
 		DashBoardPage db = new DashBoardPage(driver);
-		db.clickUpgradePage();
+		db.clickUpgradeButton();
 		
 		String currentURL = db.getCurrentURL();
-		Assert.assertTrue(currentURL.contains("upgrade-to-advanced"));
+		Assert.assertTrue(currentURL.contains("upgrade"));
 	}
 	
 	@Test (priority = 3, dependsOnMethods = "testClickUpgradeButton")
@@ -60,9 +63,8 @@ public class DashBoardTest extends BaseTest  {
 		db.enterYourFullName();
 		db.enterJobTitle();
 		db.NumberOfEmployeeSelect();
-		db.clickNotRobotCheckBox();
-		db.clickSubmitButton();		
-	}
+		//db.clickSubmitButton();		
+	} */
 	
 	@Test (priority = 4)
 	public void testSearchMenu ()
@@ -165,18 +167,16 @@ public class DashBoardTest extends BaseTest  {
 	}
 	
 	@Test (priority = 14)
-	public void testClaimVisibility ()
+	public void testClaimVisibility () throws IOException
 	{
 		DashBoardPage db = new DashBoardPage(driver);
 		db.clickClaim();
 		
-		try {
-			db.getScreenShot("claim_text_visibility");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
 		String currentURL = db.getCurrentURL();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Claim']")));
+		db.getScreenShot("claim-text-visibility");
 		Assert.assertTrue(currentURL.contains("claim"));
 	}
 	

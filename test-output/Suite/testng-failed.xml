@@ -5,9 +5,8 @@
     <classes>
       <class name="tests.DashBoardTest">
         <methods>
-          <include name="testUpgradeInfo"/>
-          <include name="testBuzzVisibility"/>
           <include name="setup"/>
+          <include name="testBuzzVisibility"/>
           <include name="testTimeVisibility"/>
           <include name="testMaintainanceVisibility"/>
           <include name="testPerformanceVisibility"/>
@@ -15,13 +14,11 @@
           <include name="testClaimVisibility"/>
           <include name="testRecruitementVisibility"/>
           <include name="testSearchMenu"/>
-          <include name="testDashBoardText"/>
           <include name="tearDown"/>
-          <include name="testMyInfoPage"/>
           <include name="testAdminVisibility"/>
           <include name="testPIMvisibility"/>
+          <include name="testMyInfoPage"/>
           <include name="testDirectoryVisibility"/>
-          <include name="testClickUpgradeButton"/>
         </methods>
       </class> <!-- tests.DashBoardTest -->
     </classes>
