@@ -1,5 +1,7 @@
 package tests;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -70,6 +72,122 @@ public class DashBoardTest extends BaseTest  {
 		
 		String menuText = driver.findElement(By.xpath("//span[text()='Admin']")).getText();
 		Assert.assertEquals(menuText, "Admin");
+	}
+	
+	@Test (priority = 5)
+	public void testAdminVisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickAdmin();
+
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("admin"));
+	}
+	
+	@Test (priority = 6)
+	public void testPIMvisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickPIM();
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("pim"));
+	}
+	
+	@Test (priority = 7)
+	public void testLeaveVisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickLeave();
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("leave"));
+	}
+	
+	@Test (priority = 8)
+	public void testTimeVisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickTime();
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("time"));
+	}
+	
+	@Test (priority = 9)
+	public void testRecruitementVisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickRecruitment();
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("recruitment"));
+	}   
+	
+	@Test (priority = 10)
+	public void testMyInfoPage ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickMyInfo();
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("viewPersonalDetails"));
+	}
+	
+	@Test (priority = 11)
+	public void testPerformanceVisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickPerformance();
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("performance"));
+	}
+	
+	@Test (priority = 12)
+	public void testDirectoryVisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickDirectory();
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("directory"));
+	}
+	
+	@Test (priority = 13)
+	public void testMaintainanceVisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickMaintainance();
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("maintenance"));
+	}
+	
+	@Test (priority = 14)
+	public void testClaimVisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickClaim();
+		
+		try {
+			db.getScreenShot("claim_text_visibility");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("claim"));
+	}
+	
+	@Test (priority = 15)
+	public void testBuzzVisibility ()
+	{
+		DashBoardPage db = new DashBoardPage(driver);
+		db.clickBuzz();
+		
+		String currentURL = db.getCurrentURL();
+		Assert.assertTrue(currentURL.contains("buzz"));
 	}
 	
 }

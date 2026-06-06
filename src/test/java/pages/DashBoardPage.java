@@ -1,8 +1,13 @@
 package pages;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -219,5 +224,13 @@ public class DashBoardPage {
 	{
 		driver.findElement(profileDropDown).click();
 		driver.findElement(logout).click();
+	}
+	
+	//Method for Taking the Screenshot
+	public void getScreenShot (String fileName) throws IOException
+	{
+		File srnshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		File destinationFile = new File ("./ResultScreenShot/" + fileName + ".png");
+		FileUtils.copyFile(srnshot, destinationFile);
 	}
 }
