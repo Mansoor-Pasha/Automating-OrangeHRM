@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="DashBoardTest(failed)">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.DashBoardTest">
+      <class name="tests.LoginTest">
         <methods>
           <include name="setup"/>
-          <include name="testBuzzVisibility"/>
-          <include name="testTimeVisibility"/>
-          <include name="testMaintainanceVisibility"/>
-          <include name="testPerformanceVisibility"/>
-          <include name="testLeaveVisibility"/>
-          <include name="testClaimVisibility"/>
-          <include name="testRecruitementVisibility"/>
-          <include name="testSearchMenu"/>
+          <include name="testBlankPass"/>
           <include name="tearDown"/>
-          <include name="testAdminVisibility"/>
-          <include name="testPIMvisibility"/>
-          <include name="testMyInfoPage"/>
-          <include name="testDirectoryVisibility"/>
+          <include name="testBlankCrede"/>
+          <include name="testBlankUserInvaPass"/>
+          <include name="testInvalidUserName"/>
+          <include name="testBlankPassInvUserName"/>
+          <include name="testBlankUserName"/>
         </methods>
-      </class> <!-- tests.DashBoardTest -->
+      </class> <!-- tests.LoginTest -->
     </classes>
-  </test> <!-- DashBoardTest(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
