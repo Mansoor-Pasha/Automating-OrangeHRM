@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="DashBoardTest(failed)">
     <classes>
-      <class name="tests.LoginTest">
+      <class name="tests.DashBoardTest">
         <methods>
-          <include name="setup"/>
-          <include name="testBlankPass"/>
+          <include name="testSearchMenu"/>
           <include name="tearDown"/>
-          <include name="testBlankCrede"/>
-          <include name="testBlankUserInvaPass"/>
-          <include name="testInvalidUserName"/>
-          <include name="testBlankPassInvUserName"/>
-          <include name="testBlankUserName"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.DashBoardTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- DashBoardTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

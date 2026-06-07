@@ -9,12 +9,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DashBoardPage {
 	
-	WebDriver driver;
-	WebDriverWait wait;
+	private WebDriver driver;
+	private WebDriverWait wait;
 	
 	public DashBoardPage (WebDriver driver) {
 		this.driver = driver;
@@ -22,33 +23,39 @@ public class DashBoardPage {
 	}
 	
 	// For DashBoard Header Paths 
-	By dashboardText = By.xpath("//h6[text() = 'Dashboard']");
+	private By dashboardText = By.xpath("//h6[text() = '']");
 		
 	//LOCATORS FOR TESTING orangeHRM DASHBOARD PAGE 
 	//Search Box Path
-	By searchPlaceHolder = By.xpath("//input[@placeholder='Search']");
+	private By searchPlaceHolder = By.xpath("//input[@placeholder='Search']");
 	
 	//Left Menu Paths	
-	By adminSection = By.xpath("//span[text()='Admin']");
-	By pimSection = By.xpath("//span[text()='PIM']");
-	By leaveSection = By.xpath("//span[text()='Leave']");
-	By timeSection = By.xpath("//span[text()='Time']");
-	By recruitmentSection = By.xpath("//span[text()='Recruitment']");
-	By myInfoSection = By.xpath("//span[text()='My Info']");
-	By performanceSection = By.xpath("//span[text()='Performance']");
-	By directorySection = By.xpath("//span[text()='Directory']");
-	By maintainSection = By.xpath("//span[text()='Maintenance']");
-	By claimSection = By.xpath("//span[text()='Claim']");
-	By buzzSection = By.xpath("//span[text()='Buzz']");
+	private By adminSection = By.xpath("//span[text()='Admin']");
+	private By pimSection = By.xpath("//span[text()='PIM']");
+	private By leaveSection = By.xpath("//span[text()='Leave']");
+	private By timeSection = By.xpath("//span[text()='Time']");
+	private By recruitmentSection = By.xpath("//span[text()='Recruitment']");
+	private By myInfoSection = By.xpath("//span[text()='My Info']");
+	private By performanceSection = By.xpath("//span[text()='Performance']");
+	private By directorySection = By.xpath("//span[text()='Directory']");
+	private By maintainSection = By.xpath("//span[text()='Maintenance']");
+	private By claimSection = By.xpath("//span[text()='Claim']");
+	private By buzzSection = By.xpath("//span[text()='Buzz']");
 	
 	//Profile Paths
-	By profileDropDown = By.xpath("//span[@class='oxd-userdropdown-tab']");
-	By logout = By.xpath("//a[text()='Logout']");
+	private By profileDropDown = By.xpath("//span[@class='oxd-userdropdown-tab']");
+	private By logout = By.xpath("//a[text()='Logout']");
 	
 	// To get CurrentURL of the Page
 	public String getCurrentURL ()
 	{
 		return driver.getCurrentUrl();
+	}
+	
+	//Method for wait
+	public void waitForElement ()
+	{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(dashboardText));
 	}
 	
 	//METHODS FOR ACCESSING LOCATORS OF THE orangeHRM DASHBOARD 
@@ -75,66 +82,77 @@ public class DashBoardPage {
 	//Method for Navigating to Admin Section
 	public void clickAdmin ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(adminSection));
 		driver.findElement(adminSection).click();
 	}
 	
 	//Method for Navigating to PIM Section
 	public void clickPIM ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(pimSection));
 		driver.findElement(pimSection).click();
 	}
 	
 	//Method for Navigating to Leave Section
 	public void clickLeave ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(leaveSection));
 		driver.findElement(leaveSection).click();
 	}
 	
 	//Method for Navigating to Time Section
 	public void clickTime ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(timeSection));
 		driver.findElement(timeSection).click();
 	}
 	
 	//Method for Navigating to Recruitment Section
 	public void clickRecruitment ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(recruitmentSection));
 		driver.findElement(recruitmentSection).click();
 	}
 	
 	//Method for Navigating to MyInfo Section
 	public void clickMyInfo ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(myInfoSection));
 		driver.findElement(myInfoSection).click();
 	}
 	
 	//Method for Navigating to Performance Section
 	public void clickPerformance ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(performanceSection));
 		driver.findElement(performanceSection).click();
 	}
 	
 	//Method for Navigating to Directory Section
 	public void clickDirectory ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(directorySection));
 		driver.findElement(directorySection).click();
 	}
 	
 	//Method for Navigating to Maintainance Section
 	public void clickMaintainance ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(maintainSection));
 		driver.findElement(maintainSection).click();
 	}
 	
 	//Method for Navigating to Claim Section
 	public void clickClaim ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(claimSection));
 		driver.findElement(claimSection).click();
 	}
 	
 	//Method for Navigating to Buzz Section
 	public void clickBuzz ()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(buzzSection));
 		driver.findElement(buzzSection).click();
 	}
 	

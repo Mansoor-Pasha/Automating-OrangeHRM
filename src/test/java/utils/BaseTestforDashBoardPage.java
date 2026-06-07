@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -24,13 +26,21 @@ protected WebDriver driver;
 		options.addArguments("--disable-notifications");
 		
 		driver = new ChromeDriver(options);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
 		//Login
-		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
-		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
-		driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//input[@placeholder='Username']")))
+				.sendKeys("Admin");
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//input[@placeholder='Password']")))
+				.sendKeys("admin123");
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']")))
+				.click();
 	}
 	
 	@AfterMethod

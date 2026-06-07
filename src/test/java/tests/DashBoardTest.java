@@ -1,11 +1,8 @@
 package tests;
 
 import java.io.IOException;
-import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -35,9 +32,8 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 	@Test (priority = 1)
 	public void testDashBoardText () throws IOException
 	{
-		DashBoardPage db = new DashBoardPage(driver);	
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Dashboard']")));
+		DashBoardPage db = new DashBoardPage(driver);
+		db.waitForElement();
 		db.getScreenShot("DashBoard-page");
 		Assert.assertEquals(db.getDashboardText(), 
 				"Dashboard");
@@ -47,11 +43,11 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 	public void testSearchMenu () throws IOException
 	{
 		DashBoardPage db = new DashBoardPage(driver);
+		db.waitForElement();		
 		db.searchPlace("Admin");
 
 		String menuText = driver.findElement(By.xpath("//span[text()='Admin']")).getText();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search']")));
+		db.waitForElement();
 		db.getScreenShot("Search-Text-Visible");
 		Assert.assertEquals(menuText, "Admin");
 	}
@@ -63,8 +59,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickAdmin();
 
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Admin']")));
+		db.waitForElement();
 		db.getScreenShot("Admin-page");
 		Assert.assertTrue(currentURL.contains("admin"));
 	}
@@ -76,8 +71,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickPIM();
 		
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='PIM']")));
+		db.waitForElement();
 		db.getScreenShot("PIM-page");
 		Assert.assertTrue(currentURL.contains("pim"));
 	}
@@ -89,8 +83,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickLeave();
 		
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Leave']")));
+		db.waitForElement();
 		db.getScreenShot("Leave-page");
 		Assert.assertTrue(currentURL.contains("leave"));
 	}
@@ -102,8 +95,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickTime();
 		
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Time']")));
+		db.waitForElement();
 		db.getScreenShot("Time-page");
 		Assert.assertTrue(currentURL.contains("time"));
 	}
@@ -115,8 +107,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickRecruitment();
 		
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Recruitment']")));
+		db.waitForElement();
 		db.getScreenShot("Recruitment-page");
 		Assert.assertTrue(currentURL.contains("recruitment"));
 	}   
@@ -128,8 +119,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickMyInfo();
 		
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='PIM']")));
+		db.waitForElement();
 		db.getScreenShot("MyInfo-page");
 		Assert.assertTrue(currentURL.contains("viewPersonalDetails"));
 	}
@@ -141,8 +131,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickPerformance();
 		
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Performance']")));
+		db.waitForElement();
 		db.getScreenShot("Performance-page");
 		Assert.assertTrue(currentURL.contains("performance"));
 	}
@@ -154,8 +143,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickDirectory();
 		
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Directory']")));
+		db.waitForElement();
 		db.getScreenShot("Directory-page");
 		Assert.assertTrue(currentURL.contains("directory"));
 	}
@@ -167,8 +155,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickMaintainance();
 		
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Administrator Access']")));
+		db.waitForElement();
 		db.getScreenShot("Maintainance-page");
 		Assert.assertTrue(currentURL.contains("maintenance"));
 	}
@@ -180,9 +167,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickClaim();
 		
 		String currentURL = db.getCurrentURL();
-		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Claim']")));
+		db.waitForElement();
 		db.getScreenShot("Claim-page");
 		Assert.assertTrue(currentURL.contains("claim"));
 	}
@@ -194,8 +179,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickBuzz();
 		
 		String currentURL = db.getCurrentURL();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Buzz']")));
+		db.waitForElement();
 		db.getScreenShot("Buzz-page");
 		Assert.assertTrue(currentURL.contains("buzz"));
 	}

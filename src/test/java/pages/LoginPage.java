@@ -24,12 +24,12 @@ public class LoginPage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	
-	By usernameField  = By.xpath("//input[@name = 'username']");
-	By passwordField = By.xpath("//input[@name='password']");
-	By loginBtn = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']");
-	By forgotpass = By.xpath("//p[@class='oxd-text oxd-text--p orangehrm-login-forgot-header']");
-	By dashboardText = By.xpath("//h6[text()='Dashboard']");
-	By getErrorMsg = By.xpath("//div[@class='oxd-alert-content oxd-alert-content--error']");
+	private By usernameField  = By.xpath("//input[@name = 'username']");
+	private By passwordField = By.xpath("//input[@name='password']");
+	private By loginBtn = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']");
+	private By forgotpass = By.xpath("//p[@class='oxd-text oxd-text--p orangehrm-login-forgot-header']");
+	private By dashboardText = By.xpath("//h6[text()='Dashboard']");
+	private By getErrorMsg = By.xpath("//div[@class='oxd-alert-content oxd-alert-content--error']");
 	
 	public LoginPage (WebDriver driver)
 	{
