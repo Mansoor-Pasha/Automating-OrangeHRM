@@ -26,7 +26,7 @@ protected WebDriver driver;
 		options.addArguments("--disable-notifications");
 		
 		driver = new ChromeDriver(options);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
 		//Login

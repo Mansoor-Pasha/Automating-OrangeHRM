@@ -33,23 +33,22 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 	public void testDashBoardText () throws IOException
 	{
 		DashBoardPage db = new DashBoardPage(driver);
-		db.waitForElement();
-		db.getScreenShot("DashBoard-page");
+		db.waitForLocator(By.xpath("//h6[text()='Dashboard']"));
 		Assert.assertEquals(db.getDashboardText(), 
 				"Dashboard");
+		db.getScreenShot("DashBoard-page");
 	}
 	
 	@Test (priority = 2)
 	public void testSearchMenu () throws IOException
 	{
-		DashBoardPage db = new DashBoardPage(driver);
-		db.waitForElement();		
+		DashBoardPage db = new DashBoardPage(driver);	
+		db.waitForElement();
 		db.searchPlace("Admin");
 
 		String menuText = driver.findElement(By.xpath("//span[text()='Admin']")).getText();
-		db.waitForElement();
-		db.getScreenShot("Search-Text-Visible");
 		Assert.assertEquals(menuText, "Admin");
+		db.getScreenShot("Search-Text-Visible");
 	}
 	
 	@Test (priority = 3)
@@ -59,7 +58,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickAdmin();
 
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='Admin']"));
 		db.getScreenShot("Admin-page");
 		Assert.assertTrue(currentURL.contains("admin"));
 	}
@@ -71,7 +70,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickPIM();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='PIM']"));
 		db.getScreenShot("PIM-page");
 		Assert.assertTrue(currentURL.contains("pim"));
 	}
@@ -83,7 +82,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickLeave();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='Leave']"));
 		db.getScreenShot("Leave-page");
 		Assert.assertTrue(currentURL.contains("leave"));
 	}
@@ -95,7 +94,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickTime();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='Time']"));
 		db.getScreenShot("Time-page");
 		Assert.assertTrue(currentURL.contains("time"));
 	}
@@ -107,7 +106,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickRecruitment();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='Recruitment']"));
 		db.getScreenShot("Recruitment-page");
 		Assert.assertTrue(currentURL.contains("recruitment"));
 	}   
@@ -119,7 +118,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickMyInfo();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='PIM']"));
 		db.getScreenShot("MyInfo-page");
 		Assert.assertTrue(currentURL.contains("viewPersonalDetails"));
 	}
@@ -131,7 +130,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickPerformance();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='Performance']"));
 		db.getScreenShot("Performance-page");
 		Assert.assertTrue(currentURL.contains("performance"));
 	}
@@ -143,7 +142,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickDirectory();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='Directory']"));
 		db.getScreenShot("Directory-page");
 		Assert.assertTrue(currentURL.contains("directory"));
 	}
@@ -155,7 +154,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickMaintainance();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='Administrator Access']"));
 		db.getScreenShot("Maintainance-page");
 		Assert.assertTrue(currentURL.contains("maintenance"));
 	}
@@ -167,7 +166,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickClaim();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='Claim']"));
 		db.getScreenShot("Claim-page");
 		Assert.assertTrue(currentURL.contains("claim"));
 	}
@@ -179,7 +178,7 @@ public class DashBoardTest extends BaseTestforDashBoardPage  {
 		db.clickBuzz();
 		
 		String currentURL = db.getCurrentURL();
-		db.waitForElement();
+		db.waitForLocator(By.xpath("//h6[text()='Buzz']"));
 		db.getScreenShot("Buzz-page");
 		Assert.assertTrue(currentURL.contains("buzz"));
 	}

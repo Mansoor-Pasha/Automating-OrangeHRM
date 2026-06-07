@@ -19,15 +19,13 @@ public class DashBoardPage {
 	
 	public DashBoardPage (WebDriver driver) {
 		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	}
-	
-	// For DashBoard Header Paths 
-	private By dashboardText = By.xpath("//h6[text() = '']");
-		
+			
 	//LOCATORS FOR TESTING orangeHRM DASHBOARD PAGE 
 	//Search Box Path
 	private By searchPlaceHolder = By.xpath("//input[@placeholder='Search']");
+	private By dashBoardText = By.xpath("//h6[text()='Dashboard']");
 	
 	//Left Menu Paths	
 	private By adminSection = By.xpath("//span[text()='Admin']");
@@ -55,26 +53,26 @@ public class DashBoardPage {
 	//Method for wait
 	public void waitForElement ()
 	{
-		wait.until(ExpectedConditions.visibilityOfElementLocated(dashboardText));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(dashBoardText));
+	} 
+	
+	public void waitForLocator (By locator)
+	{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 	
 	//METHODS FOR ACCESSING LOCATORS OF THE orangeHRM DASHBOARD 
 	//Method for Getting DashBoardText of the Dashboard
 	public String getDashboardText ()
 	{
-		return driver.findElement(dashboardText).getText();
+		return driver.findElement(dashBoardText).getText();
 	}
 	
-	
-	//Method for getting Upgrade Page URL
-	public String upgradePageURL ()
-	{
-		return driver.getCurrentUrl();
-	}
 	
 	//Method for Search Place Holder 
 	public void searchPlace (String menuName)
 	{
+		driver.findElement(searchPlaceHolder).click();
 		driver.findElement(searchPlaceHolder).clear();
 		driver.findElement(searchPlaceHolder).sendKeys(menuName);
 	}
@@ -167,8 +165,12 @@ public class DashBoardPage {
 	public void getScreenShot (String fileName) throws IOException
 	{
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destinationFile = new File ("./DashBoardPageSrnShots/" + fileName + ".jpg");
+		File folder = new File ("./DashBoardPageSrnShots");
+		folder.mkdir();
+		String timeStamp = String.valueOf(System.currentTimeMillis());
+		File destinationFile = new File 
+				("./DashBoardPageSrnShots/" + fileName + "_" + timeStamp +  ".jpg");
 		FileUtils.copyFile(srcFile, destinationFile);
-		System.out.println("ScreenShot Captured Successfully");
+		System.out.println("ScreenShot of " + fileName + " captured Successfully");
 	}
 }
